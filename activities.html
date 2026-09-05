@@ -6,19 +6,74 @@
     <title>Portfolio - กิจกรรมที่เข้าร่วม</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Sarabun', sans-serif; background: #f8fafc; color: #334155; }
+        body { font-family: 'Sarabun', sans-serif; background: #f8fafc; color: #334155; padding-bottom: 40px; }
+        
+        /* แถบเมนูด้านบน */
         nav { background: #1e293b; padding: 15px; text-align: center; }
         nav a { color: #f8fafc; text-decoration: none; margin: 0 10px; font-weight: 500; font-size: 0.95rem; }
         nav a.active { color: #3b82f6; border-bottom: 2px solid #3b82f6; padding-bottom: 4px; }
-        .container { max-width: 800px; margin: 40px auto; background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        h2 { color: #1e3a8a; border-left: 4px solid #2563eb; padding-left: 12px; margin-bottom: 20px; }
-        .card { background: #fafafa; border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; margin-bottom: 15px; }
-        .card h3 { color: #1e293b; margin-bottom: 8px; font-size: 1.15rem; }
-        .card p { color: #475569; font-size: 1rem; }
+        
+        /* พื้นที่เนื้อหาหลัก */
+        .container { 
+            max-width: 800px; 
+            margin: 40px auto; 
+            background: #fff; 
+            padding: 50px 40px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+        }
+        
+        h1 { color: #1e3a8a; font-size: 2rem; border-left: 5px solid #2563eb; padding-left: 15px; margin-bottom: 35px; }
+        
+        /* การ์ดกิจกรรมแต่ละรายการ */
+        .activity-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-top: 4px solid #3b82f6;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 35px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        
+        .activity-card h2 {
+            font-size: 1.35rem;
+            color: #1e3a8a;
+            margin-bottom: 20px;
+            text-align: left;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+
+        /* กล่องรูปภาพขนาดใหญ่ */
+        .activity-img-box {
+            margin-bottom: 20px;
+        }
+        .activity-img-box img {
+            width: 100%;
+            max-width: 550px;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid #cbd5e1;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .activity-card p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #475569;
+            text-align: left;
+            background: #fff;
+            padding: 15px 20px;
+            border-radius: 6px;
+            border-left: 4px solid #0284c7;
+        }
     </style>
 </head>
 <body>
 
+<!-- เมนูเปลี่ยนหน้า -->
 <nav>
     <a href="index.html">หน้าปก</a>
     <a href="intro.html">คำนำ</a>
@@ -29,17 +84,38 @@
 </nav>
 
 <div class="container">
-    <h2>🏆 กิจกรรมที่เข้าร่วม (Activities)</h2>
+    <h1>กิจกรรมที่เข้าร่วม</h1>
     
-    <div class="card">
-        <h3>1. การพัฒนาเว็บไซต์ Portfolio ออนไลน์</h3>
-        <p>เรียนรู้และออกแบบเว็บไซต์ด้วยตนเองผ่าน HTML/CSS และนำขึ้นระบบ GitHub Pages เพื่อสร้างแฟ้มสะสมผลงาน</p>
+    <!-- กิจกรรมที่ 1 -->
+    <div class="activity-card">
+        <h2>โครงการเหลือ-ขอ</h2>
+        <div class="activity-img-box">
+            <!-- ใส่ชื่อไฟล์รูปภาพกิจกรรมที่ 1 ใน src -->
+            <img src="https://via.placeholder.com/600x400?text=ACTIVITY+1+IMAGE" alt="โครงการเหลือ-ขอ">
+        </div>
+        <p>ช่วยแยกประเภทของที่นำมาบริจาค นำของที่ยังใช้ได้ไปส่งต่อและบริจาค</p>
     </div>
 
-    <div class="card">
-        <h3>2. กิจกรรมเตรียมความพร้อมสายวิทย์-คณิต เตรียมวิศวะ</h3>
-        <p>เข้าร่วมการฝึกปฏิบัติการและกิจกรรมทางวิชาการของโรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”</p>
+    <!-- กิจกรรมที่ 2 -->
+    <div class="activity-card">
+        <h2>เปิดโลกวิชาการ</h2>
+        <div class="activity-img-box">
+            <!-- ใส่ชื่อไฟล์รูปภาพกิจกรรมที่ 2 ใน src -->
+            <img src="https://via.placeholder.com/600x400?text=ACTIVITY+2+IMAGE" alt="เปิดโลกวิชาการ">
+        </div>
+        <p>ได้เข้าร่วมกิจกรรมการปลูกป่าชายเลน</p>
     </div>
+
+    <!-- กิจกรรมที่ 3 -->
+    <div class="activity-card">
+        <h2>บริจาคของ</h2>
+        <div class="activity-img-box">
+            <!-- ใส่ชื่อไฟล์รูปภาพกิจกรรมที่ 3 ใน src -->
+            <img src="https://via.placeholder.com/600x400?text=ACTIVITY+3+IMAGE" alt="บริจาคของ">
+        </div>
+        <p>ได้ร่วมบริจาคของกินและของใช้ ที่จำเป็นเพื่อส่งต่อความช่วยเหลือแก่ผู้ที่ขาดแคลน</p>
+    </div>
+
 </div>
 
 </body>
