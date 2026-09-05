@@ -3,23 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - ความสนใจในการศึกษาต่อ</title>
+    <title>Portfolio - ความสนใจศึกษาต่อ</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Sarabun', sans-serif; background: #f8fafc; color: #334155; }
+        body { font-family: 'Sarabun', sans-serif; background: #f8fafc; color: #334155; padding-bottom: 40px; }
+        
+        /* แถบเมนูด้านบน */
         nav { background: #1e293b; padding: 15px; text-align: center; }
         nav a { color: #f8fafc; text-decoration: none; margin: 0 10px; font-weight: 500; font-size: 0.95rem; }
         nav a.active { color: #3b82f6; border-bottom: 2px solid #3b82f6; padding-bottom: 4px; }
-        .container { max-width: 800px; margin: 40px auto; background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        h2 { color: #1e3a8a; border-left: 4px solid #2563eb; padding-left: 12px; margin-bottom: 20px; }
-        table { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
-        th, td { border: 1px solid #e2e8f0; padding: 12px; text-align: left; }
-        th { background: #f1f5f9; }
-        p { font-size: 1.05rem; line-height: 1.7; color: #475569; }
+        
+        /* พื้นที่เนื้อหาหลัก */
+        .container { 
+            max-width: 800px; 
+            margin: 40px auto; 
+            background: #fff; 
+            padding: 50px 40px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+        }
+        
+        h1 { color: #1e3a8a; font-size: 2rem; border-left: 5px solid #2563eb; padding-left: 15px; margin-bottom: 30px; }
+        
+        /* รูปภาพประกอบเนื้อหา */
+        .featured-img-box {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .featured-img-box img {
+            width: 320px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            border: 3px solid #3b82f6;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        
+        /* เนื้อหาความสนใจ */
+        .article-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-left: 5px solid #3b82f6;
+            padding: 25px 30px;
+            border-radius: 8px;
+            margin-bottom: 35px;
+        }
+        .article-card p {
+            font-size: 1.1rem;
+            line-height: 1.85;
+            color: #334155;
+            text-align: justify;
+            text-indent: 2.5em;
+            margin-bottom: 15px;
+        }
+        .article-card p:last-child { margin-bottom: 0; }
+
+        /* ส่วนคณะ/สาขาที่สนใจ */
+        .target-section {
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .target-section h2 {
+            font-size: 1.3rem;
+            color: #0369a1;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #bae6fd;
+            padding-bottom: 8px;
+        }
+        
+        .major-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .major-card {
+            background: #fff;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            padding: 20px;
+            width: 48%;
+            min-width: 260px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .major-card img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+        .major-card h3 {
+            font-size: 1.15rem;
+            color: #1e3a8a;
+            margin-bottom: 5px;
+        }
+        .major-card p {
+            font-size: 0.95rem;
+            color: #64748b;
+        }
     </style>
 </head>
 <body>
 
+<!-- เมนูเปลี่ยนหน้า -->
 <nav>
     <a href="index.html">หน้าปก</a>
     <a href="intro.html">คำนำ</a>
@@ -30,27 +121,42 @@
 </nav>
 
 <div class="container">
-    <h2>🎓 ประวัติการศึกษา (Education)</h2>
-    <table>
-        <tr>
-            <th>ระดับการศึกษา</th>
-            <th>สถานศึกษา</th>
-            <th>แผนการเรียน</th>
-        </tr>
-        <tr>
-            <td>มัธยมศึกษาตอนปลาย</td>
-            <td>โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”</td>
-            <td>วิทย์-คณิต เตรียมวิศวะ</td>
-        </tr>
-        <tr>
-            <td>มัธยมศึกษาตอนต้น</td>
-            <td>โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”</td>
-            <td>-</td>
-        </tr>
-    </table>
+    <h1>🎓 ความสนใจในการศึกษาต่อ</h1>
+    
+    <!-- 1. รูปภาพประกอบบทความ -->
+    <div class="featured-img-box">
+        <!-- เมื่อมีชื่อไฟล์รูปภาพ ให้เปลี่ยน src="ชื่อไฟล์รูป.jpg" ได้เลยครับ -->
+        <img src="IMG_1986.jpeg" alt="รูปประกอบความสนใจ">
+    </div>
 
-    <h2>🎯 ความสนใจในการศึกษาต่อ (Statement of Purpose)</h2>
-    <p>เนื่องจากศึกษาในสายการเรียนวิทย์-คณิต เตรียมวิศวะ จึงมีความสนใจในด้านคำนวณและเทคโนโลยี มุ่งมั่นที่จะศึกษาต่อในระดับอุดมศึกษาด้านวิศวกรรมศาสตร์หรือเทคโนโลยี เพื่อนำทักษะมาต่อยอดในอนาคต</p>
+    <!-- 2. แรงบันดาลใจและความสนใจ -->
+    <div class="article-card">
+        <p>ในฐานะนักเรียนมัธยมศึกษาปีที่ 6 ซึ่งกำลังอยู่ในช่วงเวลาสำคัญของชีวิตที่ต้องเลือกเส้นทางอนาคตอย่างจริงจัง ข้าพเจ้ามีความสนใจในอาชีพ Accounting หรือสายงานด้านการบัญชี เนื่องจากข้าพเจ้ามีความสนใจในด้านธุรกิจและต้องการเรียนรู้ว่าการจัดการด้านการเงินและบัญชีมีส่วนสำคัญต่อการดำเนินธุรกิจอย่างไร ข้าพเจ้ามองว่าการบัญชีไม่ได้เกี่ยวข้องเพียงแค่การคำนวณหรือตัวเลขเท่านั้น แต่ยังเป็นส่วนสำคัญในการช่วยให้ธุรกิจสามารถวางแผน ควบคุมค่าใช้จ่าย และนำข้อมูลทางการเงินไปใช้ประกอบการตัดสินใจได้</p>
+        <p>ด้วยเหตุผลนี้ ข้าพเจ้าจึงสนใจที่จะศึกษาต่อและพัฒนาความรู้ด้านการบัญชี เพื่อให้มีความเข้าใจเกี่ยวกับธุรกิจมากยิ่งขึ้น และสามารถนำความรู้ไปใช้ในการประกอบอาชีพในอนาคตได้อย่างมีประสิทธิภาพ</p>
+    </div>
+
+    <!-- 3. คณะ/สาขาที่สนใจศึกษาต่อ -->
+    <div class="target-section">
+        <h2>📌 คณะ / สาขาวิชาที่สนใจศึกษาต่อ</h2>
+        
+        <div class="major-grid">
+            <!-- สาขาที่ 1 -->
+            <div class="major-card">
+                <!-- ใส่ชื่อไฟล์โลโก้มหาวิทยาลัย/คณะใน src -->
+                <img src="https://via.placeholder.com/100?text=LOGO" alt="โลโก้สาขาการบัญชี">
+                <h3>สาขาการบัญชี</h3>
+                <p>Accounting</p>
+            </div>
+
+            <!-- สาขาที่ 2 -->
+            <div class="major-card">
+                <!-- ใส่ชื่อไฟล์โลโก้มหาวิทยาลัย/คณะใน src -->
+                <img src="https://via.placeholder.com/100?text=LOGO" alt="โลโก้การท่องเที่ยวและการโรงแรม">
+                <h3>สาขาการท่องเที่ยวและการโรงแรม</h3>
+                <p>Tourism and Hospitality</p>
+            </div>
+        </div>
+    </div>
 </div>
 
 </body>
