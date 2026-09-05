@@ -7,19 +7,67 @@
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Sarabun', sans-serif; background: #f8fafc; color: #334155; padding-bottom: 40px; }
+        
+        /* แถบเมนูด้านบน */
         nav { background: #1e293b; padding: 15px; text-align: center; }
         nav a { color: #f8fafc; text-decoration: none; margin: 0 10px; font-weight: 500; font-size: 0.95rem; }
         nav a.active { color: #3b82f6; border-bottom: 2px solid #3b82f6; padding-bottom: 4px; }
+        
+        /* พื้นที่เนื้อหาหลัก */
         .container { max-width: 800px; margin: 40px auto; background: #fff; padding: 50px 30px; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .image-placeholder { width: 240px; height: 240px; border-radius: 50%; background: #f1f5f9; border: 3px dashed #94a3b8; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; color: #64748b; }
-        h1 { font-size: 2.5rem; color: #1e293b; margin-bottom: 10px; letter-spacing: 2px; }
-        .subtitle { font-size: 1.3rem; color: #2563eb; font-weight: 600; margin-bottom: 15px; }
-        .info-box { background: #f0f9ff; padding: 20px; border-radius: 8px; display: inline-block; text-align: left; margin-top: 15px; border: 1px solid #bae6fd; }
-        .info-box p { font-size: 1.05rem; color: #0369a1; margin-bottom: 6px; }
+        
+        /* ช่องใส่รูปภาพใหญ่ 240px */
+        .image-placeholder { 
+            width: 240px; 
+            height: 240px; 
+            border-radius: 50%; 
+            background: #f1f5f9; 
+            border: 3px dashed #94a3b8; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            margin: 0 auto 25px; 
+            color: #64748b; 
+            font-size: 1.1rem;
+        }
+        
+        h1 { font-size: 2.2rem; color: #1e293b; margin-bottom: 20px; letter-spacing: 1px; }
+        
+        /* กล่องข้อมูลแนะนำตัว */
+        .info-box { 
+            background: #f0f9ff; 
+            padding: 25px; 
+            border-radius: 10px; 
+            display: inline-block; 
+            text-align: left; 
+            border: 1px solid #bae6fd; 
+            margin-bottom: 25px;
+            width: 100%;
+            max-width: 500px;
+        }
+        .info-box h2 { font-size: 1.2rem; color: #0369a1; margin-bottom: 12px; border-bottom: 2px solid #bae6fd; padding-bottom: 5px; }
+        .info-box p { font-size: 1.05rem; color: #0369a1; margin-bottom: 8px; line-height: 1.6; }
+        
+        /* กล่องช่องทางติดต่อ */
+        .contact-box { 
+            background: #eff6ff; 
+            padding: 25px; 
+            border-radius: 10px; 
+            display: inline-block; 
+            text-align: left; 
+            border: 1px solid #bfdbfe; 
+            width: 100%;
+            max-width: 500px;
+        }
+        .contact-box h2 { font-size: 1.2rem; color: #1e3a8a; margin-bottom: 12px; border-bottom: 2px solid #bfdbfe; padding-bottom: 5px; }
+        .contact-box p { font-size: 1.05rem; color: #1e3a8a; margin-bottom: 10px; }
+        .contact-box a { color: #2563eb; text-decoration: none; font-weight: 500; }
+        .contact-box a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
 
+<!-- เมนูเปลี่ยนหน้า -->
 <nav>
     <a href="index.html" class="active">หน้าปก</a>
     <a href="intro.html">คำนำ</a>
@@ -30,15 +78,26 @@
 </nav>
 
 <div class="container">
-    <div class="image-placeholder">[ เว้นช่องใส่รูปภาพ ]</div>
-    <h1>PORTFOLIO</h1>
-    <p class="subtitle">แฟ้มสะสมผลงานออนไลน์</p>
+    <!-- ช่องใส่รูปภาพขยายใหญ่ -->
+    <div class="image-placeholder">[ ใส่รูปภาพที่นี่ ]</div>
     
+    <!-- แนะนำตัว -->
     <div class="info-box">
-        <p><strong>ชื่อ-นามสกุล:</strong> นางสาวธวัลรัตน์ พัชเกษตร (แพรว)</p>
-        <p><strong>ระดับชั้น:</strong> มัธยมศึกษาปีที่ 6</p>
-        <p><strong>แผนการเรียน:</strong> วิทย์-คณิต เตรียมวิศวะ</p>
-        <p><strong>โรงเรียน:</strong> บ้านบึง “อุตสาหกรรมนุเคราะห์”</p>
+        <h2>📌 แนะนำตัว</h2>
+        <p><strong>ชื่อ-นามสกุล:</strong> นางสาวธวัลรัตน์ พัชเกษร</p>
+        <p><strong>สถานะ:</strong> นักเรียนชั้นมัธยมศึกษาปีที่ 6</p>
+        <p><strong>สายการเรียน:</strong> วิทยาศาสตร์-คณิตศาสตร์ เตรียมวิศวะ</p>
+        <p><strong>โรงเรียน:</strong> โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”</p>
+    </div>
+
+    <br>
+
+    <!-- ช่องทางติดต่อ -->
+    <div class="contact-box">
+        <h2>📞 ช่องทางติดต่อ</h2>
+        <p>📸 <strong>Instagram :</strong> <a href="https://instagram.com/pxpr_.3wq" target="_blank">pxpr_.3wq</a></p>
+        <p>📘 <strong>Facebook :</strong> <a href="https://facebook.com" target="_blank">Tati Tauwxn</a></p>
+        <p>📧 <strong>Gmail :</strong> <a href="mailto:s34322@banbung.ac.th">s34322@banbung.ac.th</a></p>
     </div>
 </div>
 
