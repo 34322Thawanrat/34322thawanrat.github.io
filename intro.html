@@ -13,16 +13,29 @@
         nav a { color: #f8fafc; text-decoration: none; margin: 0 10px; font-weight: 500; font-size: 0.95rem; }
         nav a.active { color: #3b82f6; border-bottom: 2px solid #3b82f6; padding-bottom: 4px; }
         
-        /* พื้นที่เนื้อหาหลัก */
-        .container { max-width: 800px; margin: 40px auto; background: #fff; padding: 50px 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        /* พื้นที่เนื้อหาหลักแบบเล่มรายงาน */
+        .container { 
+            max-width: 800px; 
+            margin: 40px auto; 
+            background: #fff; 
+            padding: 60px 50px; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+            border: 1px solid #e2e8f0;
+        }
         
-        h1 { color: #1e3a8a; font-size: 2rem; border-left: 5px solid #2563eb; padding-left: 15px; margin-bottom: 30px; }
+        .report-header { text-align: center; margin-bottom: 40px; border-bottom: 2px solid #1e3a8a; padding-bottom: 15px; }
+        .report-header h1 { font-size: 2.2rem; color: #1e3a8a; letter-spacing: 2px; }
         
-        .content { font-size: 1.1rem; line-height: 1.8; color: #334155; text-align: justify; }
-        .content p { margin-bottom: 20px; text-indent: 2.5em; }
+        .section-title { font-size: 1.25rem; font-weight: 600; color: #1e293b; margin-top: 25px; margin-bottom: 12px; }
         
-        .signature { margin-top: 40px; text-align: right; font-size: 1.1rem; font-weight: 500; color: #1e293b; }
-        .signature p { margin-bottom: 5px; }
+        .content { font-size: 1.1rem; line-height: 1.85; color: #334155; text-align: justify; }
+        .content p { margin-bottom: 18px; text-indent: 2.5em; }
+        
+        .objective-list { margin-left: 2.5em; margin-bottom: 25px; }
+        .objective-list li { margin-bottom: 8px; line-height: 1.7; }
+        
+        .signature-block { margin-top: 50px; text-align: right; font-size: 1.1rem; color: #1e293b; line-height: 1.8; }
     </style>
 </head>
 <body>
@@ -38,17 +51,28 @@
 </nav>
 
 <div class="container">
-    <h1> คำนำ</h1>
+    <div class="report-header">
+        <h1>คำนำ</h1>
+    </div>
     
     <div class="content">
-        <p>แฟ้มสะสมผลงานนี้ จัดทำขึ้นเพื่อเป็นตัวแทนนำเสนอเอกสารข้อมูลเกี่ยวกับ ประวัติส่วนตัว ประวัติการศึกษา ความสนใจในการศึกษาต่อ กิจกรรมที่เข้าร่วม และความสามารถพิเศษของข้าพเจ้า</p>
+        <p>แฟ้มสะสมผลงาน (Portfolio) ฉบับนี้ จัดทำขึ้นเพื่อรวบรวมและนำเสนอข้อมูลประวัติส่วนตัว ประวัติการศึกษา ผลงาน กิจกรรมที่ได้เข้าร่วม รวมถึงความรู้ความสามารถพิเศษของข้าพเจ้า เพื่อใช้เป็นเอกสารประกอบการพิจารณาเข้าศึกษาต่อในระดับอุดมศึกษา</p>
         
-        <p>ข้าพเจ้าหวังว่าแฟ้มสะสมผลงานฉบับนี้จะทำให้ทุกท่านที่ได้อ่าน เห็นคุณค่าและความสามารถโดยรวมของข้าพเจ้า ข้าพเจ้าขอขอบคุณคุณครูซึ่งเป็นผู้ให้คำแนะนำในการรวบรวมเอกสารและข้อมูลต่างๆ ในการจัดทำแฟ้มสะสมผลงานฉบับนี้ให้เสร็จลุล่วงไปได้ด้วยดี และขอขอบคุณท่านผู้ปกครองและเพื่อนๆ ที่ได้กรุณาให้ความช่วยเหลือในการจัดเตรียมเอกสารและข้อแนะนำหลายประการ จนทำให้แฟ้มสะสมผลงานฉบับนี้มีความสมบูรณ์มากยิ่งขึ้น</p>
+        <div class="section-title">วัตถุประสงค์</div>
+        <ol class="objective-list">
+            <li>เพื่อรวบรวมประวัติส่วนตัว ประวัติการศึกษา และผลงานอย่างเป็นระบบ</li>
+            <li>เพื่อสะท้อนความรู้ ทักษะ ความสามารถ และความพร้อมในการศึกษาต่อ</li>
+            <li>เพื่อแสดงถึงความมุ่งมั่นและความตั้งใจจริงของข้าพเจ้าต่อคณะกรรมการผู้พิจารณา</li>
+        </ol>
+
+        <p>ข้าพเจ้าหวังเป็นอย่างยิ่งว่าแฟ้มสะสมผลงานฉบับนี้ จะช่วยให้ทุกท่านได้เห็นถึงศักยภาพ คุณค่า และพัฒนาการโดยรวมของข้าพเจ้ามากยิ่งขึ้น ข้าพเจ้าขอขอบพระคุณคณะครูอาจารย์โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์” ที่ได้ให้คำแนะนำ ปลูกฝังความรู้ และคอยช่วยเหลือในการจัดทำเอกสารฉบับนี้จนสำเร็จลุล่วงด้วยดี รวมถึงขอขอบคุณท่านผู้ปกครองและเพื่อนๆ ที่คอยให้การสนับสนุนและคำแนะนำมาโดยตลอด</p>
+        
+        <p>หากแฟ้มสะสมผลงานฉบับนี้มีข้อผิดพลาดประการใด ข้าพเจ้าขออภัยไว้ ณ ที่นี้ด้วย</p>
     </div>
 
-    <div class="signature">
-        <p><strong>จัดทำโดย</strong></p>
+    <div class="signature-block">
         <p>ธวัลรัตน์ พัชเกษร</p>
+        <p>ผู้จัดทำ</p>
     </div>
 </div>
 
