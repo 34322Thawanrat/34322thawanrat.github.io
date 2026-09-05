@@ -6,21 +6,91 @@
     <title>Portfolio - ประวัติส่วนตัว</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Sarabun', sans-serif; background: #f8fafc; color: #334155; }
+        body { font-family: 'Sarabun', sans-serif; background: #f8fafc; color: #334155; padding-bottom: 40px; }
+        
+        /* แถบเมนูด้านบน */
         nav { background: #1e293b; padding: 15px; text-align: center; }
         nav a { color: #f8fafc; text-decoration: none; margin: 0 10px; font-weight: 500; font-size: 0.95rem; }
         nav a.active { color: #3b82f6; border-bottom: 2px solid #3b82f6; padding-bottom: 4px; }
-        .container { max-width: 800px; margin: 40px auto; background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        h2 { color: #1e3a8a; border-left: 4px solid #2563eb; padding-left: 12px; margin-bottom: 20px; }
-        ul { list-style: none; padding: 0; font-size: 1.05rem; }
-        li { margin-bottom: 12px; color: #475569; }
-        .contact-card { background: #eff6ff; border: 1px solid #bfdbfe; padding: 20px; border-radius: 10px; margin-top: 20px; }
-        .contact-card p { margin-bottom: 10px; font-size: 1.05rem; }
-        .contact-card a { color: #2563eb; text-decoration: none; font-weight: 500; }
+        
+        /* พื้นที่เนื้อหาหลัก */
+        .container { 
+            max-width: 800px; 
+            margin: 40px auto; 
+            background: #fff; 
+            padding: 50px 40px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+        }
+        
+        h1 { color: #1e3a8a; font-size: 2rem; border-left: 5px solid #2563eb; padding-left: 15px; margin-bottom: 30px; }
+        
+        /* จัดเลย์เอาต์ส่วนโปรไฟล์ (รูปภาพ + ข้อมูล) */
+        .profile-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: flex-start;
+        }
+        
+        .profile-img {
+            flex: 0 0 250px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .profile-img img {
+            width: 250px;
+            height: auto;
+            border-radius: 12px;
+            border: 3px solid #3b82f6;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+        
+        .profile-details {
+            flex: 1;
+            min-width: 280px;
+        }
+        
+        .info-group {
+            background: #f8fafc;
+            border-left: 4px solid #3b82f6;
+            padding: 15px 20px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 15px;
+        }
+        
+        .info-group p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #334155;
+            margin-bottom: 6px;
+        }
+        .info-group p:last-child { margin-bottom: 0; }
+        .info-group strong { color: #1e293b; }
+
+        .tag-box {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .tag-box h3 { font-size: 1.1rem; color: #15803d; margin-bottom: 8px; }
+        .tag-box p { font-size: 1.05rem; color: #166534; line-height: 1.6; }
+
+        .warn-box {
+            background: #fffbe2;
+            border: 1px solid #fef08a;
+            padding: 15px 20px;
+            border-radius: 8px;
+        }
+        .warn-box h3 { font-size: 1.1rem; color: #a16207; margin-bottom: 8px; }
+        .warn-box p { font-size: 1.05rem; color: #854d0e; line-height: 1.6; }
     </style>
 </head>
 <body>
 
+<!-- เมนูเปลี่ยนหน้า -->
 <nav>
     <a href="index.html">หน้าปก</a>
     <a href="intro.html">คำนำ</a>
@@ -31,19 +101,41 @@
 </nav>
 
 <div class="container">
-    <h2>👤 ประวัติส่วนตัว (Personal Profile)</h2>
-    <ul>
-        <li><strong>ชื่อ-นามสกุล:</strong> นางสาวธวัลรัตน์ พัชเกษตร</li>
-        <li><strong>ชื่อเล่น:</strong> แพรว</li>
-        <li><strong>การศึกษาปัจจุบัน:</strong> ชั้นมัธยมศึกษาปีที่ 6 แผนการเรียนวิทย์-คณิต เตรียมวิศวะ</li>
-        <li><strong>สถานศึกษา:</strong> โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”</li>
-    </ul>
+    <h1>👤 ประวัติส่วนตัว</h1>
+    
+    <div class="profile-wrapper">
+        <!-- ช่องใส่รูปภาพ -->
+        <div class="profile-img">
+            <img src="IMG_8695.jpeg" alt="รูปโปรไฟล์">
+        </div>
+        
+        <!-- ข้อมูลส่วนตัว -->
+        <div class="profile-details">
+            <div class="info-group">
+                <p><strong>ชื่อ-นามสกุล:</strong> นางสาวธวัลรัตน์ พัชเกษร</p>
+                <p><strong>ชื่อเล่น:</strong> แพรว</p>
+                <p><strong>อายุ:</strong> 17 ปี</p>
+                <!-- อย่าลืมเติม วัน/เดือน/ปีเกิด ในช่องด้านล่างนี้นะครับ -->
+                <p><strong>วัน/เดือน/ปีเกิด:</strong> [ ระบุ วัน/เดือน/ปีเกิด ]</p>
+                <p><strong>เชื้อชาติ:</strong> ไทย | <strong>สัญชาติ:</strong> ไทย | <strong>ศาสนา:</strong> พุทธ</p>
+            </div>
 
-    <h2 style="margin-top: 35px;">📞 ช่องทางการติดต่อ (Contact)</h2>
-    <div class="contact-card">
-        <p>📸 <strong>Instagram:</strong> <a href="https://instagram.com/pxpr_.3wq" target="_blank">pxpr_.3wq</a></p>
-        <p>📘 <strong>Facebook:</strong> <a href="https://facebook.com" target="_blank">Tati Tauwxn</a></p>
-        <p>📧 <strong>Gmail:</strong> <a href="mailto:s34322@banbung.ac.th">s34322@banbung.ac.th</a></p>
+            <div class="info-group">
+                <p><strong>งานอดิเรก:</strong> ฟังเพลง, ดูคอนเสิร์ต, เล่นเกม และเปิดใจเรียนรู้อะไรใหม่ๆ อยู่เสมอ</p>
+            </div>
+
+            <!-- ข้อดี -->
+            <div class="tag-box">
+                <h3>✨ ข้อดี / จุดเด่น</h3>
+                <p>เป็นคนรอบคอบ ช่างสังเกต และสามารถทำงานร่วมกับผู้อื่นได้เป็นอย่างดี</p>
+            </div>
+
+            <!-- จุดที่กำลังพัฒนา (ข้อเสียในมุมมองบวก) -->
+            <div class="warn-box">
+                <h3>🌱 จุดที่กำลังพัฒนา</h3>
+                <p>ประหม่าเมื่อต้องพูดต่อหน้าคนจำนวนมาก แต่กำลังฝึกฝนพัฒนาทักษะการสื่อสารและการพูดในที่สาธารณะอย่างสม่ำเสมอ</p>
+            </div>
+        </div>
     </div>
 </div>
 
