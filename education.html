@@ -25,7 +25,7 @@
         
         h1 { color: #1e3a8a; font-size: 2rem; border-left: 5px solid #2563eb; padding-left: 15px; margin-bottom: 30px; }
         
-        /* รูปภาพประกอบเนื้อหา */
+        /* รูปภาพประกอบบทความ */
         .featured-img-box {
             text-align: center;
             margin-bottom: 30px;
@@ -58,51 +58,62 @@
         }
         .article-card p:last-child { margin-bottom: 0; }
 
-        /* ส่วนคณะ/สาขาที่สนใจ */
+        /* ส่วนสถาบันและคณะที่สนใจ */
         .target-section {
             background: #f0f9ff;
             border: 1px solid #bae6fd;
             padding: 30px;
             border-radius: 10px;
         }
-        .target-section h2 {
-            font-size: 1.3rem;
-            color: #0369a1;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #bae6fd;
-            padding-bottom: 8px;
-        }
         
-        .major-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        
-        .major-card {
-            background: #fff;
-            border: 1px solid #cbd5e1;
-            border-radius: 10px;
-            padding: 20px;
-            width: 48%;
-            min-width: 260px;
+        /* ช่องใส่รูปมหาวิทยาลัย (1 รูปใหญ่) */
+        .uni-img-box {
             text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            margin-bottom: 20px;
         }
-        .major-card img {
-            width: 100px;
-            height: 100px;
-            object-fit: contain;
-            margin-bottom: 15px;
+        .uni-img-box img {
+            max-width: 180px;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            background: #fff;
+            padding: 10px;
+            border: 1px solid #cbd5e1;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
-        .major-card h3 {
-            font-size: 1.15rem;
+
+        .faculty-title {
+            text-align: center;
+            font-size: 1.4rem;
             color: #1e3a8a;
-            margin-bottom: 5px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px dashed #bae6fd;
         }
-        .major-card p {
+
+        /* รายการสาขาวิชาต่อเรียงลงมา */
+        .major-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .major-item {
+            background: #fff;
+            border-left: 5px solid #0284c7;
+            border-top: 1px solid #e2e8f0;
+            border-right: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 18px 25px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+        .major-item h3 {
+            font-size: 1.15rem;
+            color: #0369a1;
+            margin-bottom: 4px;
+        }
+        .major-item p {
             font-size: 0.95rem;
             color: #64748b;
         }
@@ -125,7 +136,6 @@
     
     <!-- 1. รูปภาพประกอบบทความ -->
     <div class="featured-img-box">
-        <!-- เมื่อมีชื่อไฟล์รูปภาพ ให้เปลี่ยน src="ชื่อไฟล์รูป.jpg" ได้เลยครับ -->
         <img src="IMG_1986.jpeg" alt="รูปประกอบความสนใจ">
     </div>
 
@@ -135,26 +145,38 @@
         <p>ด้วยเหตุผลนี้ ข้าพเจ้าจึงสนใจที่จะศึกษาต่อและพัฒนาความรู้ด้านการบัญชี เพื่อให้มีความเข้าใจเกี่ยวกับธุรกิจมากยิ่งขึ้น และสามารถนำความรู้ไปใช้ในการประกอบอาชีพในอนาคตได้อย่างมีประสิทธิภาพ</p>
     </div>
 
-    <!-- 3. คณะ/สาขาที่สนใจศึกษาต่อ -->
+    <!-- 3. คณะ/สาขา/มหาวิทยาลัย ที่สนใจ -->
     <div class="target-section">
-        <h2>📌 คณะ / สาขาวิชาที่สนใจศึกษาต่อ</h2>
         
-        <div class="major-grid">
-            <!-- สาขาที่ 1 -->
-            <div class="major-card">
-                <!-- ใส่ชื่อไฟล์โลโก้มหาวิทยาลัย/คณะใน src -->
-                <img src="https://via.placeholder.com/100?text=LOGO" alt="โลโก้สาขาการบัญชี">
-                <h3>สาขาการบัญชี</h3>
-                <p>Accounting</p>
+        <!-- ช่องใส่รูปโลโก้ / ตราสัญลักษณ์มหาวิทยาลัย (1 รูป) -->
+        <div class="uni-img-box">
+            <!-- เปลี่ยน src="ชื่อไฟล์รูปมหาวิทยาลัย.png" ได้เลยครับ -->
+            <img src="https://via.placeholder.com/200x200?text=UNIVERSITY+LOGO" alt="โลโก้มหาวิทยาลัย">
+        </div>
+
+        <!-- ชื่อคณะหลัก -->
+        <h2 class="faculty-title">🏛️ คณะบริหารธุรกิจ</h2>
+        
+        <!-- รายการสาขาวิชาเรียงต่อกันลงมา -->
+        <div class="major-list">
+            
+            <div class="major-item">
+                <h3>1. สาขาวิชาการบัญชี</h3>
+                <p>Major in Accounting</p>
             </div>
 
-            <!-- สาขาที่ 2 -->
-            <div class="major-card">
-                <!-- ใส่ชื่อไฟล์โลโก้มหาวิทยาลัย/คณะใน src -->
-                <img src="https://via.placeholder.com/100?text=LOGO" alt="โลโก้การท่องเที่ยวและการโรงแรม">
-                <h3>สาขาการท่องเที่ยวและการโรงแรม</h3>
-                <p>Tourism and Hospitality</p>
+            <div class="major-item">
+                <h3>2. สาขาวิชาการท่องเที่ยวและการโรงแรม</h3>
+                <p>Major in Tourism and Hospitality</p>
             </div>
+
+            <!-- หากต้องการเพิ่มสาขาอื่น สามารถก๊อปปี้บล็อกด้านล่างนี้ไปวางเพิ่มได้ครับ
+            <div class="major-item">
+                <h3>3. สาขาวิชา...</h3>
+                <p>Major in ...</p>
+            </div>
+            -->
+
         </div>
     </div>
 </div>
