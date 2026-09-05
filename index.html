@@ -1,32 +1,252 @@
-<!-- นี่คือโครงสร้างหน้าเว็บทังหมด ้ -->
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8">
-<title>หน้าแนะนำตัวของฉัน</title>
-<style>
-body {
-background-color: #f4f7f6; color: #333;
-text-align: center; padding: 50px;
-
-}
-.card {
-background: skyblue; border-radius: 10px;
-box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-max-width: 500px; margin: 0 auto; padding: 30px;
-
-}
-h1 { color: #2c3e50; }
-p { font-size: 18px; line-height: 1.6; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - ธวัลรัตน์ พัชเกษตร</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Sarabun', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #f8fafc;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+        }
+        header {
+            text-align: center;
+            padding-bottom: 25px;
+            border-bottom: 2px solid #edf2f7;
+            margin-bottom: 30px;
+        }
+        /* กรอบสำหรับเว้นช่องใส่รูป */
+        .image-placeholder {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background-color: #f1f5f9;
+            border: 3px dashed #94a3b8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px auto;
+            color: #64748b;
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 10px;
+        }
+        h1 {
+            color: #1e293b;
+            font-size: 2.2rem;
+            margin-bottom: 6px;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            color: #2563eb;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        .student-info {
+            color: #475569;
+            font-size: 1.05rem;
+            margin-top: 8px;
+            line-height: 1.7;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #1e3a8a;
+            font-size: 1.3rem;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+            margin-bottom: 15px;
+        }
+        .sub-heading {
+            font-weight: bold;
+            color: #334155;
+            margin: 10px 0 5px 0;
+        }
+        p, li {
+            color: #475569;
+            font-size: 1rem;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #e2e8f0;
+            padding: 10px 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f1f5f9;
+            color: #1e293b;
+        }
+        .contact-card {
+            background-color: #eff6ff;
+            border: 1px solid #bfdbfe;
+            padding: 18px 22px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+        .contact-card p {
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+            color: #1e293b;
+        }
+        .contact-card p:last-child {
+            margin-bottom: 0;
+        }
+        .contact-card a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+        .activity-card {
+            background: #fafafa;
+            border: 1px solid #f1f5f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+    </style>
 </head>
 <body>
-<div class="card">
-<h1>ยินดีต้อนรับสู่โปรไฟล์ของฉัน </h1>
-<p>สวัสดีค่ะ! ฉันชื่อ <strong>ธวัลรัตน์ พัขเกษร (Thawanrat Patkesorn)</strong></p>
-<p>ขณะนี้กำลังศึกษา/สนใจด้าน Math</p>
-<p>นี่คือเว็บไซต์แรกของฉันที่โฮสต์บน GitHub Pages!</p>
-  <a href="portfolio.html" style="display:inline-block; background:#3498db; color:white; padding:10px 20px; text-decoration:none; border-radius:5px; margin-top:15px;">👉 ดูแฟ้มสะสมงานของผม</a>
+
+<div class="container">
+
+    <!-- 1. หน้าปก / HEADER -->
+    <header>
+        <!-- เว้นช่องสำหรับใส่รูปภาพโปรไฟล์ -->
+        <div class="image-placeholder">
+            [ เว้นช่องใส่รูปภาพ ]
+        </div>
+        
+        <h1>PORTFOLIO</h1>
+        <p class="subtitle">นางสาวธวัลรัตน์ พัชเกษตร (แพรว)</p>
+        <div class="student-info">
+            <p>นักเรียนชั้นมัธยมศึกษาปีที่ 6</p>
+            <p>สายการเรียน วิทย์-คณิต เตรียมวิศวะ</p>
+            <p>โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”</p>
+        </div>
+    </header>
+
+    <!-- 2. คำนำ -->
+    <section>
+        <h2>1. คำนำ (Introduction)</h2>
+        <p>แฟ้มสะสมผลงาน (Portfolio) ฉบับนี้ จัดทำขึ้นเพื่อนำเสนอข้อมูลประวัติส่วนตัว ประวัติการศึกษา ความรู้ ความสามารถ ตลอดจนกิจกรรมและผลงานต่างๆ ของข้าพเจ้า (นางสาวธวัลรัตน์ พัชเกษตร) โดยรวบรวมไว้บนเว็บไซต์เพื่อแสดงถึงความตั้งใจ ความสนใจ และความพร้อมในการศึกษาต่อในระดับอุดมศึกษา ตลอดจนการพัฒนาตนเองอย่างต่อเนื่อง</p>
+    </section>
+
+    <!-- 3. ประวัติส่วนตัว & ช่องทางการติดต่อ -->
+    <section>
+        <h2>2. ประวัติส่วนตัว & ช่องทางการติดต่อ</h2>
+        <div class="sub-heading">2.1 ข้อมูลส่วนตัว</div>
+        <ul>
+            <li><strong>ชื่อ-นามสกุล:</strong> นางสาวธวัลรัตน์ พัชเกษตร (แพรว)</li>
+            <li><strong>การศึกษา:</strong> ชั้นมัธยมศึกษาปีที่ 6 แผนการเรียนวิทย์-คณิต เตรียมวิศวะ</li>
+            <li><strong>สถานศึกษา:</strong> โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”</li>
+        </ul>
+
+        <div class="sub-heading" style="margin-top: 20px;">2.2 ช่องทางการติดต่อ (Contact)</div>
+        <div class="contact-card">
+            <p>📸 <strong>Instagram:</strong> <a href="https://instagram.com/pxpr_.3wq" target="_blank">pxpr_.3wq</a></p>
+            <p>📘 <strong>Facebook:</strong> <a href="https://facebook.com" target="_blank">Tati Tauwxn</a></p>
+            <p>📧 <strong>Gmail:</strong> <a href="mailto:s34322@banbung.ac.th">s34322@banbung.ac.th</a></p>
+            <p>🌐 <strong>GitHub Website:</strong> <a href="https://34322thawanrat.github.io" target="_blank">34322thawanrat.github.io</a></p>
+        </div>
+    </section>
+
+    <!-- 4. ประวัติการศึกษา -->
+    <section>
+        <h2>3. ประวัติการศึกษา (Education History)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ระดับการศึกษา</th>
+                    <th>สถานศึกษา</th>
+                    <th>แผนการเรียน</th>
+                    <th>ปีการศึกษา</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>มัธยมศึกษาตอนปลาย</strong></td>
+                    <td>โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”</td>
+                    <td>วิทย์-คณิต เตรียมวิศวะ</td>
+                    <td>2022 - ปัจจุบัน</td>
+                </tr>
+                <tr>
+                    <td><strong>มัธยมศึกษาตอนต้น</strong></td>
+                    <td>โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”</td>
+                    <td>-</td>
+                    <td>2019 - 2022</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- 5. ความสนใจในการศึกษาต่อ -->
+    <section>
+        <h2>4. ความสนใจในการศึกษาต่อ (Statement of Purpose)</h2>
+        <div class="sub-heading">4.1 แรงบันดาลใจ</div>
+        <p>เนื่องจากศึกษาในสายการเรียนวิทย์-คณิต เตรียมวิศวะ จึงมีความสนใจและความหลงใหลในด้านเทคโนโลยี คำนวณ และการประยุกต์ใช้ทักษะทางวิศวกรรม/คอมพิวเตอร์ในการแก้ปัญหาจริง จึงได้เริ่มต้นศึกษาและสร้างสรรค์ผลงานพัฒนาเว็บไซต์เพื่อสะสมประสบการณ์</p>
+        
+        <div class="sub-heading">4.2 เป้าหมายในอนาคต</div>
+        <p>มุ่งมั่นที่จะเข้าศึกษาต่อในระดับอุดมศึกษาในสาขาที่เกี่ยวข้องกับเทคโนโลยีหรือวิศวกรรมศาสตร์ เพื่อนำความรู้ไปต่อยอดและพัฒนาตนเองให้พร้อมสำหรับการทำงานในอนาคต</p>
+    </section>
+
+    <!-- 6. กิจกรรมที่เข้าร่วม -->
+    <section>
+        <h2>5. กิจกรรมที่เข้าร่วม (Activities & Projects)</h2>
+        
+        <div class="activity-card">
+            <div class="sub-heading">5.1 การพัฒนาเว็บไซต์ Portfolio บน GitHub</div>
+            <p><strong>รายละเอียด:</strong> ออกแบบและพัฒนาเว็บไซต์แฟ้มสะสมผลงานออนไลน์ส่วนตัวด้วยภาษา HTML/CSS และแสดงผลผ่าน GitHub Pages</p>
+        </div>
+
+        <div class="activity-card">
+            <div class="sub-heading">5.2 กิจกรรมส่งเสริมทักษะวิชาการและเตรียมความพร้อมวิศวกรรม</div>
+            <p><strong>รายละเอียด:</strong> เข้าร่วมกิจกรรมการเรียนรู้และการฝึกปฏิบัติการในสายวิทย์-คณิต เตรียมวิศวะ ของโรงเรียน</p>
+        </div>
+    </section>
+
+    <!-- 7. ความสามารถพิเศษ -->
+    <section>
+        <h2>6. ความสามารถพิเศษ (Skills)</h2>
+        <ul>
+            <li><strong>Technical Skills:</strong> พื้นฐานการเขียนโค้ด HTML/CSS, การใช้งาน GitHub Pages, การใช้โปรแกรมคอมพิวเตอร์พื้นฐาน</li>
+            <li><strong>Soft Skills:</strong> ทักษะการคิดวิเคราะห์เชิงตรรกะ, การแก้ไขปัญหา, การทำงานเป็นทีม</li>
+            <li><strong>Language Skills:</strong> ภาษาไทย (ภาษาแม่)</li>
+        </ul>
+    </section>
+
 </div>
+
 </body>
 </html>
